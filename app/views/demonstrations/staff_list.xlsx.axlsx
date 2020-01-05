@@ -1,0 +1,18 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: 'staffs') do |sheet|
+  styles = {
+    # title: メイリオ, 16pt, 太字
+    title: sheet.styles.add_style(font_name: 'メイリオ', sz: 16, b: true),
+ 
+    # header: メイリオ, 太字, 背景色は #ACCACF (最初の00は透明度)
+    header: sheet.styles.add_style(font_name: 'メイリオ', b: true, bg_color: '00ACCAF'),
+ 
+    # date: Arial, yyyy/mm/dd 表記
+    date: sheet.styles.add_style(font_name: 'Arial', format_code: 'yyyy/mm/dd')
+  }
+
+  sheet.add_row ['name', 'language'], style: styles[:title]
+  staffs.each do |staff|
+    sheet.add_row [staff.name, staff.language.name]
+  end
+end

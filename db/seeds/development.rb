@@ -1,4 +1,4 @@
-staffs = (1..10).map do |i|
+staffs = (1..10000).map do |i|
   Staff.new(
     name: "#{Faker::Name.name}_#{i}",
     language_id: Language.first.id

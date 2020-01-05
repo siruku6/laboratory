@@ -48,6 +48,11 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
 
+  # INFO: For rubocop
+  gem 'rubocop', require: false
+  gem 'rubocop-rails'
+  gem 'pre-commit', require: false
+
   # INFO: For better_errors
   gem 'better_errors'
   gem 'binding_of_caller'

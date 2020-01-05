@@ -1,0 +1,17 @@
+require: rubocop-rails
+
+Rails:
+  Enabled: true
+AllCops:
+  # TargetRubyVersion: 2.6
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'db/**/*'
+    - vendor/**/*
+
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false

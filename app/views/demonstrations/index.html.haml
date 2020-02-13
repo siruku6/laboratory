@@ -1,1 +1,5 @@
 = link_to 'export_staffs', export_staffs_demonstrations_path(format: :xlsx)
+
+= form_with(model: Language.new) do |f|
+  = f.text_field :name
+  = f.submit 'hoge'

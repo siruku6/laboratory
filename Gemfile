@@ -15,7 +15,7 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 gem 'sass-rails', '~> 5.0'

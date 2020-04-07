@@ -1,5 +1,12 @@
 class DemonstrationsController < ApplicationController
-  def index; end
+  def index
+    binding.pry
+    @staffs = Staff.includes(:language)
+                   .all
+                   .page(params[:page])
+                   .per(10)
+    @long_param = params[:long_parameter]
+  end
 
   def export_staffs
     xlsx_file_name = 'samples.xlsx'

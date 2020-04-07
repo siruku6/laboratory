@@ -3,3 +3,22 @@
 = form_with(model: Language.new) do |f|
   = f.text_field :name
   = f.submit 'hoge'
+
+%h2 kaminari sample
+
+= form_with(url: demonstrations_path, method: :post, local: true) do |f|
+  = text_field_tag :long_parameter, 'あああああいいいいい'
+  = f.submit 'OK'
+
+%table
+  %tr
+    %th ID
+    %th Language
+    %th Name
+  - @staffs.each do |staff|
+    %tr
+      %td= staff.id
+      %td= staff.language.name
+      %td= staff.name
+
+= paginate @staffs, params: { long_parameter: @long_param }

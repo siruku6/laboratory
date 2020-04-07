@@ -10,7 +10,6 @@ gem 'activerecord-import'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'caxlsx_rails'
-# gem 'coffee-rails', '~> 4.2'
 gem 'faker'
 gem 'haml-rails'
 gem 'jbuilder', '~> 2.5'
@@ -68,3 +67,6 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
+
+gem 'kaminari'
+gem 'ajax-datatables-rails'
